@@ -1,0 +1,26 @@
+{
+    "CR0": {
+        "Fonction": "test",
+        "Nom": "De Langitia",
+        "Prenom": "test",
+        "Renumeration": "0"
+    },
+    "CR2429": {
+        "Fonction": "Explorateur et Gardien de Louna",
+        "Nom": "De Langitia",
+        "Prenom": "Guillaume",
+        "Renumeration": "15"
+    },
+    "CR2430": {
+        "Fonction": "Technicien du SSV",
+        "Nom": "De Langitia",
+        "Prenom": "Alex",
+        "Renumeration": "15"
+    },
+    "F4": {
+        "Fonction": "Fee de Langitia",
+        "Nom": "De Langitia",
+        "Prenom": "Messio",
+        "Renumeration": "0"
+    }
+}
