@@ -1,3 +1,11 @@
+###########################################################################
+### DEV: The_Am0nnal13
+### Description du fichier: Liste de fonction intervenant dans differents fichier du programme
+###########################################################################
+
+#################
+### PROGRAMME ###
+#################
 #fonction de wait
 def Wait():
     try:
