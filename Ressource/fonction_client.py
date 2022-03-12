@@ -1,6 +1,17 @@
+###########################################################################
+### DEV: The_Am0nnal13
+### Description du fichier: Liste des fonction utiliser dans l'interface client
+###########################################################################
+
+###################
+### IMPORTATION ###
+###################
 import json
 from universal_fonction import *
 
+#################
+### PROGRAMME ###
+#################
 #Detecter une mission actif
 def DetectMissionDetail(MAT):
     tf = open("Data\Mission.json", "r")
