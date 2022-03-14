@@ -6,16 +6,36 @@
 ###################
 ### IMPORTATION ###
 ###################
+#importation projet
 from universal_fonction import *
-import webbrowser as wb
 from fonction_admin import *
 from fonction_client import *
+import code_interface_graphique as f
+#importation python
+import sys
 import json
-from universal_fonction import *
+from PyQt5 import QtWidgets, QtCore
+import webbrowser as wb
+################################
+### DEFINITION DES FONCTIONS ET DES CLASS ###
+################################
+class demoQt(QtWidgets.QMainWindow, f.Ui_MainWindow):
+    '''
+    Class qui gere la form de mon interface
+    '''
+    def __init__(self, parent=None):
+        super(demoQt, self).__init__(parent)
+        self.setupUi(self)
 
-################################
-### DEFINITION DES FONCTIONS ###
-################################
+def main():
+    '''
+    Fontion ayant comme but de demarer l'interface graphique
+    '''
+    app = QtWidgets.QApplication(sys.argv)
+    form = demoQt()
+    form.show
+    app.exec()
+
 def LogA(l):
     '''
     Interface administateur
@@ -189,6 +209,9 @@ def LogU(l):
 #################
 ### PROGRAMME ###
 #################
+#demarrage de l'interface graphique
+if __name__ == "__main__":
+    main()
 
 #mettre en pleine ecran
 print("Pour une meilleur experience il est conseiller de passer en mode pleine ecran.")
