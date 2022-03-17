@@ -16,23 +16,25 @@ import sys
 import json
 from PyQt5 import QtWidgets, QtCore
 import webbrowser as wb
-################################
-### DEFINITION DES FONCTIONS ET DES CLASS ###
-################################
-class demoQt(QtWidgets.QMainWindow, f.Ui_MainWindow):
-    '''
+###############################################
+### DEFINITION DES FONCTIONS ET DES CLASSES ###
+###############################################
+class fenetreQt(QtWidgets.QMainWindow, f.Ui_MainWindow):
+    """
     Class qui gere la form de mon interface
-    '''
+    :param parent: QtWidgets.QMainWindow et f.Ui_MainWindow
+    """
     def __init__(self, parent=None):
-        super(demoQt, self).__init__(parent)
+        super(fenetreQt, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowTitle("Systeme Cartage")
 
 def main():
     '''
     Fontion ayant comme but de demarer l'interface graphique
     '''
     app = QtWidgets.QApplication(sys.argv)
-    form = demoQt()
+    form = fenetreQt()
     form.show
     app.exec()
 
@@ -210,7 +212,7 @@ def LogU(l):
 ### PROGRAMME ###
 #################
 #demarrage de l'interface graphique
-if __name__ == "__main__":
+if __name__ == "main":
     main()
 
 #mettre en pleine ecran
