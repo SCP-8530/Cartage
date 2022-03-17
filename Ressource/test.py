@@ -7,7 +7,7 @@
 ### IMPORTATION ###
 ###################
 #importation projet
-import code_interface_graphique
+import Ressource.code_interface_graphique as code_interface_graphique
 #importation python
 import sys
 from PyQt5 import QtWidgets

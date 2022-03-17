@@ -10,34 +10,13 @@
 from universal_fonction import *
 from fonction_admin import *
 from fonction_client import *
-import code_interface_graphique
+from Interface_grafique_fonction import *
 #importation python
-import sys
 import json
-from PyQt5 import QtWidgets, QtCore
 import webbrowser as wb
 ###############################################
 ### DEFINITION DES FONCTIONS ET DES CLASSES ###
 ###############################################
-class fenetreQt(QtWidgets.QMainWindow, code_interface_graphique.Ui_MainWindow):
-    """
-    Class qui gere la form de mon interface
-    :param parent: QtWidgets.QMainWindow et f.Ui_MainWindow
-    """
-    def __init__(self, parent=None):
-        super(fenetreQt, self).__init__(parent)
-        self.setupUi(self)
-        self.setWindowTitle("Systeme Cartage")
-
-def main():
-    '''
-    Fontion ayant comme but de demarer l'interface graphique
-    '''
-    app = QtWidgets.QApplication(sys.argv)
-    form = fenetreQt()
-    form.show()
-    app.exec()
-
 def LogA(l):
     '''
     Interface administateur
@@ -214,20 +193,17 @@ def LogU(l):
 #demarrage de l'interface graphique
 main()
 
-#mettre en pleine ecran
-print("Pour une meilleur experience il est conseiller de passer en mode pleine ecran.")
-Wait()
-ClearConsole()
 
 #Page de connexion au systeme
-print(
+fenetreQt.Modif_lbl(
         f"{mycolor.P}##########################################\n"
         f"#{mycolor.W}   Bienveunue dans le systeme Cartage   {mycolor.P}#\n"
         f"##########################################\n"
         f"#{mycolor.W}     Veiller donner votre matricule     {mycolor.P}#\n"
         f"##########################################\n{mycolor.W}"
     )
-l = input(">>> ")
+
+l = RECUPERATION_INPUT
 
 #data de detection de compte
 tf = open("Data\lstMat.json", "r")
