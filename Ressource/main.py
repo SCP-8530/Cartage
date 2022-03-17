@@ -10,7 +10,7 @@
 from universal_fonction import *
 from fonction_admin import *
 from fonction_client import *
-import code_interface_graphique as f
+import code_interface_graphique
 #importation python
 import sys
 import json
@@ -19,7 +19,7 @@ import webbrowser as wb
 ###############################################
 ### DEFINITION DES FONCTIONS ET DES CLASSES ###
 ###############################################
-class fenetreQt(QtWidgets.QMainWindow, f.Ui_MainWindow):
+class fenetreQt(QtWidgets.QMainWindow, code_interface_graphique.Ui_MainWindow):
     """
     Class qui gere la form de mon interface
     :param parent: QtWidgets.QMainWindow et f.Ui_MainWindow
