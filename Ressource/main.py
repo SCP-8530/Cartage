@@ -35,7 +35,7 @@ def main():
     '''
     app = QtWidgets.QApplication(sys.argv)
     form = fenetreQt()
-    form.show
+    form.show()
     app.exec()
 
 def LogA(l):
@@ -212,8 +212,7 @@ def LogU(l):
 ### PROGRAMME ###
 #################
 #demarrage de l'interface graphique
-if __name__ == "main":
-    main()
+main()
 
 #mettre en pleine ecran
 print("Pour une meilleur experience il est conseiller de passer en mode pleine ecran.")

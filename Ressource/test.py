@@ -31,12 +31,12 @@ def main():
     '''
     app = QtWidgets.QApplication(sys.argv)
     form = fenetreQt()
-    form.show
+    form.show()
     app.exec()
 
 #################
 ### PROGRAMME ###
 #################
 #demarrage de l'interface graphique
-if __name__ == "main":
+if __name__ == "__main__":
     main()
