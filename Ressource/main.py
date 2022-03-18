@@ -195,15 +195,15 @@ main()
 
 
 #Page de connexion au systeme
-fenetreQt.Modif_lbl(
-        f"{mycolor.P}##########################################\n"
-        f"#{mycolor.W}   Bienveunue dans le systeme Cartage   {mycolor.P}#\n"
+fenetreQt.Modif_lbl(mode="add",text=
         f"##########################################\n"
-        f"#{mycolor.W}     Veiller donner votre matricule     {mycolor.P}#\n"
-        f"##########################################\n{mycolor.W}"
+        f"#   Bienveunue dans le systeme Cartage   #\n"
+        f"##########################################\n"
+        f"#     Veiller donner votre matricule     #\n"
+        f"##########################################\n"
     )
 
-l = RECUPERATION_INPUT
+l = fenetreQt.on_ValidationBtn_clicked()
 
 #data de detection de compte
 tf = open("Data\lstMat.json", "r")

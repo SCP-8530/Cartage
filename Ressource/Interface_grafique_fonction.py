@@ -7,8 +7,8 @@
 ### IMPORTATION ###
 ###################
 import sys
-from PyQt5 import QtWidgets
-from PyQt5.QtCore import pyqtSlot
+from tkinter import Button
+from PyQt5 import QtWidgets, QtCore
 import code_interface_graphique
 
 #####################################
@@ -31,18 +31,22 @@ class fenetreQt(QtWidgets.QMainWindow, code_interface_graphique.Ui_MainWindow):
         self.setupUi(self)
         self.setWindowTitle("Systeme Cartage")
 
-    @pyqtSlot()
-    def on_ValidationBtn_clicked(self):
+    
+    def on_ValidationBtn_clicked(self): #attendre qu'un button soit activer
+        ActifButton = False
+        while ActifButton == False:
+            if self.ValidationBtn.clicked():
+                ActifButton == True
+
         texte = self.InputLineEdit.text()
+        return texte
 
-        RECUPERATION_INPUT = texte
-
-    def Modif_lbl(self,mode="add",text=""): #ajouter du text au lbl
-        if mode == "add": #ajout du texte
+    def Modif_lbl(self, pMode="", pText=""): #ajouter du text au lbl
+        if pMode == "add": #ajout du texte
             txtactuel = self.ConsoleLbl.Text()
-            self.ConsoleLbl.setText(txtactuel + text)
-        elif mode == "edit": #remplacer tout le texte du lbl
-            self.ConsoleLbl.setText(text)
+            self.ConsoleLbl.setText(txtactuel + pText)
+        elif pMode == "edit": #remplacer tout le texte du lbl
+            self.ConsoleLbl.setText(pText)
 
 def main():
     '''
@@ -60,7 +64,6 @@ def main():
 #|   l'entre de texte =  InputLineEdit
 #|   le label = ConsoleLbl
 #----------
-
 
 
 
